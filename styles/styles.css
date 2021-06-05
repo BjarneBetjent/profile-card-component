@@ -1,5 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    margin: 0 0;
     background: hsl(185, 75%, 39%);
     display: flex;
     justify-content: center;
