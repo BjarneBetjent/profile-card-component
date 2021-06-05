@@ -64,6 +64,8 @@ img {
 }
 
 .profile-content {
+    display: grid;
+    grid-template-rows: 80% 20%;
     grid-row-start: 2;
     grid-row-end: 3;
     height: 100%;
@@ -71,15 +73,10 @@ img {
     background-color: white;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 h1 {
     font-size: 18px;
-    margin-top: 80px;
-    margin-left: 100px;
     margin-bottom: 0;
 }
 
@@ -90,22 +87,35 @@ h1 {
 
 .location {
     color: hsl(0, 0%, 59%);
-    margin-bottom: 70px;
-    margin-left: 130px;
+    margin-top: 10px;
+    margin-bottom: 100px;
 }
 
 .profile-numbers {
-    margin: 20px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 7px;
 }
 
 hr {
     width: 100%;
 }
 
-.stats {
+.name {
+    padding-top: 95px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats {    
     width: 33%;
     display: flex;
     flex-direction: column;
