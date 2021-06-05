@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .background-bot {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     position: absolute;
     bottom: 0;
@@ -24,7 +25,7 @@ body {
 .background-top {
     background: hsl(185, 75%, 39%) url("./../images/bg-pattern-top.svg");
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     transform: rotate(180deg);
     top: 0;
@@ -34,7 +35,7 @@ body {
 .profile-card {
     z-index: 1;
     height: 30rem;
-    width: 90vw;
+    width: 90%;
     background: url("./../images/bg-pattern-card.svg");
     border-radius: 5%;
     display: grid;
@@ -44,13 +45,9 @@ body {
 img {
     border-radius: 50%;
     border: 5px solid white;
-    /*position: absolute;
-    bottom: -30%;
-    right: 35%;*/
     position: relative;
     margin: auto;
     margin-top: 120px;
-
 }
 
 .profile-top {
@@ -61,6 +58,7 @@ img {
     position: relative;
     display: flex;
     align-items: center;
+    overflow: visible;
 }
 
 .profile-content {
@@ -115,7 +113,7 @@ hr {
     align-items: center;
 }
 
-.stats {    
+.stats {
     width: 33%;
     display: flex;
     flex-direction: column;
@@ -130,4 +128,33 @@ hr {
     margin-top: 10px;
     color: hsl(0, 0%, 59%);
     font-size: 0.8em;
+}
+
+@media only screen and (min-width: 480px) {
+    .profile-card {
+        height: 35rem;
+        width: 30rem;
+    }
+
+    img {
+        margin-top: 9.3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    
+
+    img {
+        margin-top: 9rem;
+    }
+
+    .profile-content {
+        grid-template-rows: 70% 30%;
+    }
+
+    .profile-numbers {
+        padding-top: 2em;
+    }
+
 }
